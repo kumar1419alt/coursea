@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "mingw-w64.org"
+version = "1.0"
+description = ""
+authors = ["Christoph Reiter <reiter.christoph@gmail.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs = "^1.5"
+mkdocs-material = "^9.5"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
