@@ -5,12 +5,23 @@ on:
   pull_request:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
+    if: github.actor != 'github-actions[bot]'
     name: Validate application
     runs-on: ubuntu-latest
+    services:
+      mongo:
+        image: mongo:7
+        ports:
+          - 27017:27017
+        options: >-
+          --health-cmd "mongosh --quiet --eval 'db.adminCommand({ ping: 1 }).ok'"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
     steps:
       - name: Check out source
         uses: actions/checkout@v4
@@ -66,3 +77,88 @@ jobs:
           BACKEND_URL: http://127.0.0.1:3030
           SENTIMENT_ANALYZER_URL: http://127.0.0.1:5050
         run: python manage.py check
+
+      - name: Start services and capture real cURL evidence
+        if: github.event_name == 'push' && github.ref == 'refs/heads/django-dealership-capstone'
+        env:
+          DJANGO_SECRET_KEY: ci-only-test-secret
+          DJANGO_DEBUG: "true"
+          DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1
+          BACKEND_URL: http://127.0.0.1:3030
+          SENTIMENT_ANALYZER_URL: http://127.0.0.1:5050
+          PYTHONUNBUFFERED: "1"
+          MONGO_URL: mongodb://127.0.0.1:27017/dealershipsDB
+        run: |
+          set -euo pipefail
+          npm --prefix server/database install --no-audit --no-fund
+
+          (cd server/djangoapp/microservices && PORT=5050 python app.py) >/tmp/bestcars-sentiment.log 2>&1 &
+          sentiment_pid=$!
+          MONGO_URL="$MONGO_URL" PORT=3030 node server/database/app.js >/tmp/bestcars-dealer-api.log 2>&1 &
+          dealer_pid=$!
+
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:5050/health >/dev/null; then break; fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:5050/health
+
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3030/health >/dev/null; then break; fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:3030/health
+
+          (
+            cd server
+            python manage.py migrate --noinput
+          )
+
+          export DEMO_USERNAME="capstone-demo"
+          export DEMO_PASSWORD="$(python -c 'import secrets; print(secrets.token_urlsafe(18))')"
+          echo "::add-mask::$DEMO_PASSWORD"
+          (
+            cd server
+            python manage.py shell -c 'import os; from django.contrib.auth import get_user_model; User = get_user_model(); user, _ = User.objects.get_or_create(username="capstone-demo", defaults={"email":"capstone-demo@example.test"}); user.set_password(os.environ["DEMO_PASSWORD"]); user.save()'
+          )
+
+          (
+            cd server
+            python manage.py runserver 0.0.0.0:8000 --noreload
+          ) >/tmp/bestcars-django-server.log 2>&1 &
+          django_pid=$!
+
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8000/djangoapp/health >/dev/null; then break; fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:8000/djangoapp/health
+
+          BASE_URL=http://127.0.0.1:8000 \
+          DEALER_API_URL=http://127.0.0.1:3030 \
+          SENTIMENT_URL=http://127.0.0.1:5050 \
+          bash scripts/capture-api-evidence.sh
+
+          {
+            printf '$ cd server && python manage.py runserver 0.0.0.0:8000 --noreload\n\n'
+            cat /tmp/bestcars-django-server.log
+            printf '\n$ curl -fsS http://127.0.0.1:8000/djangoapp/health\n'
+            curl -fsS http://127.0.0.1:8000/djangoapp/health
+            printf '\n'
+          } > django_server
+
+          echo "Live API evidence files generated in this CI run."
+          echo "Process IDs: Django=$django_pid DealerAPI=$dealer_pid Sentiment=$sentiment_pid"
+
+      - name: Commit live cURL evidence to this branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/django-dealership-capstone'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add django_server loginuser logoutuser getdealerreviews getalldealers getdealerbyid getdealersbyState getallcarmakes analyzereview
+          if git diff --cached --quiet; then
+            echo "No new API evidence changes to commit."
+            exit 0
+          fi
+          git commit -m "Capture live API evidence from CI [skip ci]"
+          git push origin HEAD:refs/heads/django-dealership-capstone
