@@ -7,7 +7,7 @@ cd "$ROOT_DIR"
 BASE_URL="${BASE_URL:-http://127.0.0.1:8000}"
 DEALER_API_URL="${DEALER_API_URL:-http://127.0.0.1:3030}"
 SENTIMENT_URL="${SENTIMENT_URL:-http://127.0.0.1:5050}"
-DEALER_ID="${DEALER_ID:-1}"
+DEALER_ID="${DEALER_ID:-2}"
 COOKIE_JAR="${TMPDIR:-/tmp}/bestcars-evidence-cookies.txt"
 
 capture() {

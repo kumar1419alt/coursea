@@ -22,14 +22,14 @@ API endpoints:
 - GET http://localhost:8000/djangoapp/get_cars
 - GET http://localhost:8000/djangoapp/get_dealers
 - GET http://localhost:8000/djangoapp/get_dealers/Kansas
-- GET http://localhost:8000/djangoapp/dealer/1
-- GET http://localhost:8000/djangoapp/reviews/dealer/1
+- GET http://localhost:8000/djangoapp/dealer/2
+- GET http://localhost:8000/djangoapp/reviews/dealer/2
 - POST http://localhost:8000/djangoapp/login
 - POST http://localhost:8000/djangoapp/logout
 - POST http://localhost:8000/djangoapp/register
 - POST http://localhost:8000/djangoapp/add_review
 - GET http://localhost:3030/fetchDealers
-- GET http://localhost:3030/fetchReviews/dealer/1
+- GET http://localhost:3030/fetchReviews/dealer/2
 - GET http://localhost:5050/analyze/Fantastic%20services
 
 ## Submission evidence
