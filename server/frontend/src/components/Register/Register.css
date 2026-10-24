@@ -1,0 +1,5 @@
+.register-panel { padding:clamp(22px,4vw,42px); }
+.eyebrow { color:#1769aa; font-weight:800; text-transform:uppercase; font-size:.78rem; letter-spacing:.12em; margin:0 0 7px; }
+.subheading { color:#627d98; margin-top:-3px; line-height:1.5; }
+.register-panel .form-grid { margin-top:20px; }
+.register-panel button:disabled { opacity:.65; cursor:wait; }

@@ -1,0 +1,44 @@
+:root { --navy:#102a43; --blue:#1769aa; --blue-dark:#0b4f83; --gold:#f0b429; --paper:#f5f7fa; --ink:#243b53; --muted:#627d98; --line:#d9e2ec; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--paper); color:var(--ink); }
+a { color:var(--blue); }
+.site-header { background:var(--navy); color:#fff; padding:16px clamp(16px,4vw,56px); display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; box-shadow:0 4px 20px #102a4322; }
+.brand { text-decoration:none; color:white; font-size:1.35rem; font-weight:800; letter-spacing:.02em; }
+.brand small { display:block; font-size:.72rem; font-weight:500; color:#bcccdc; letter-spacing:.08em; text-transform:uppercase; margin-top:3px; }
+.site-nav { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+.site-nav a, .site-nav button { color:#f0f4f8; text-decoration:none; border:0; background:transparent; font:inherit; cursor:pointer; }
+.site-nav a:hover, .site-nav button:hover { color:#ffd166; }
+.nav-user { background:#243b53; border-radius:999px; padding:7px 12px; color:#fff; }
+.page { max-width:1160px; padding:28px 20px 64px; margin:0 auto; }
+.hero { background:linear-gradient(115deg,#102a43eF,#1769aae0),url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=85") center/cover; min-height:230px; color:white; padding:44px clamp(24px,5vw,64px); border-radius:20px; display:flex; flex-direction:column; justify-content:center; box-shadow:0 14px 36px #102a4322; }
+.hero h1 { margin:0 0 12px; font-size:clamp(2rem,4vw,3.2rem); line-height:1.08; }
+.hero p { margin:0; max-width:650px; color:#e6f6ff; font-size:1.05rem; line-height:1.6; }
+.toolbar { display:flex; justify-content:space-between; align-items:end; gap:16px; flex-wrap:wrap; margin:28px 0 18px; }
+.toolbar h2 { margin:0; color:var(--navy); }
+.field-label { display:block; color:#486581; font-size:.86rem; font-weight:700; margin-bottom:6px; }
+input, select, textarea { width:100%; border:1px solid #bcccdc; border-radius:9px; background:#fff; color:var(--ink); padding:11px 12px; font:inherit; }
+input:focus, select:focus, textarea:focus { outline:3px solid #1769aa33; border-color:var(--blue); }
+.filter { min-width:210px; }
+.dealer-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; }
+.dealer-card, .panel { background:white; border:1px solid #e6edf3; border-radius:15px; padding:20px; box-shadow:0 5px 18px #102a4309; }
+.dealer-card h3 { margin:0 0 7px; color:var(--navy); }
+.meta { color:var(--muted); line-height:1.65; }
+.card-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+.button { appearance:none; background:var(--blue); border:1px solid var(--blue); border-radius:9px; padding:10px 15px; color:#fff; text-decoration:none; font:inherit; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; }
+.button:hover { background:var(--blue-dark); }
+.button.secondary { background:white; color:var(--blue); }
+.button.secondary:hover { background:#eaf4fb; }
+.status { padding:12px 14px; background:#eaf4fb; color:#0b4f83; border-radius:9px; margin:12px 0; }
+.status.error { background:#fff1f0; color:#a61b1b; }
+.review { border-top:1px solid var(--line); padding:16px 0; }
+.review:first-child { border-top:0; }
+.review h4 { margin:0 0 7px; }
+.sentiment { display:inline-block; font-size:.75rem; font-weight:700; text-transform:uppercase; border-radius:999px; background:#e3f9e5; color:#1f7a35; padding:4px 8px; margin-left:8px; }
+.form-panel { max-width:620px; margin:26px auto; }
+.form-panel h1 { color:var(--navy); margin-top:0; }
+.form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.form-grid .full { grid-column:1/-1; }
+.form-actions { display:flex; gap:12px; align-items:center; margin-top:18px; }
+.empty-state { color:var(--muted); padding:28px; text-align:center; background:white; border-radius:15px; }
+.site-footer { padding:24px; text-align:center; color:var(--muted); border-top:1px solid var(--line); }
+@media(max-width:640px){.site-header{align-items:flex-start}.site-nav{gap:12px}.form-grid{grid-template-columns:1fr}.form-grid .full{grid-column:auto}.hero{min-height:205px;padding:28px}}
