@@ -1,0 +1,391 @@
+Best Cars CI — captured GitHub Actions job log
+Workflow run: 40142131126
+Run URL: https://github.com/kumar1419alt/coursea/actions/runs/40142131126
+Branch: django-dealership-capstone
+Commit tested: cb0c598c4f301521a58d1ab6e4b02b6e72da5f7c
+Job: Validate application
+GitHub Actions result: completed / success
+Note: The following is the actual job log returned by GitHub Actions, preserved for the capstone evidence file.
+============================================================================
+﻿2026-10-24T23:17:39.9213405Z Current runner version: '2.338.0'
+2026-10-24T23:17:39.9239679Z ##[group]Runner Image Provisioner
+2026-10-24T23:17:39.9240584Z Hosted Compute Agent
+2026-10-24T23:17:39.9241240Z Version: 20261021.618
+2026-10-24T23:17:39.9241894Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-24T23:17:39.9242684Z Build Date: 2026-10-21T00:45:21Z
+2026-10-24T23:17:39.9243427Z Worker ID: {377da68b-59c4-4dc7-8efc-694f7fc0803d}
+2026-10-24T23:17:39.9244174Z Region: eastus
+2026-10-24T23:17:39.9244735Z Cloud: Azure
+2026-10-24T23:17:39.9245301Z ##[endgroup]
+2026-10-24T23:17:39.9247479Z ##[group]Operating System
+2026-10-24T23:17:39.9248124Z Ubuntu
+2026-10-24T23:17:39.9248702Z 24.04.5
+2026-10-24T23:17:39.9249268Z LTS
+2026-10-24T23:17:39.9249808Z ##[endgroup]
+2026-10-24T23:17:39.9250867Z ##[group]Runner Image
+2026-10-24T23:17:39.9251512Z Image: ubuntu-24.04
+2026-10-24T23:17:39.9252099Z Version: 20261012.334.1
+2026-10-24T23:17:39.9253424Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-24T23:17:39.9255031Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-24T23:17:39.9256238Z ##[endgroup]
+2026-10-24T23:17:39.9257413Z ##[group]GITHUB_TOKEN Permissions
+2026-10-24T23:17:39.9259594Z Contents: read
+2026-10-24T23:17:39.9260268Z Metadata: read
+2026-10-24T23:17:39.9260821Z ##[endgroup]
+2026-10-24T23:17:39.9262934Z Secret source: Actions
+2026-10-24T23:17:39.9264016Z Cache mode: write
+2026-10-24T23:17:39.9264926Z Prepare workflow directory
+2026-10-24T23:17:39.9596929Z Prepare all required actions
+2026-10-24T23:17:39.9645022Z Getting action download info
+2026-10-24T23:17:40.2246236Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-24T23:17:40.3418141Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-24T23:17:40.4264685Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-24T23:17:40.6357948Z Complete job name: Validate application
+2026-10-24T23:17:40.7209575Z ##[group]Run actions/checkout@v4
+2026-10-24T23:17:40.7210461Z with:
+2026-10-24T23:17:40.7210899Z   repository: kumar1419alt/coursea
+2026-10-24T23:17:40.7214824Z   token: ***
+2026-10-24T23:17:40.7215244Z   ssh-strict: true
+2026-10-24T23:17:40.7215860Z   ssh-user: git
+2026-10-24T23:17:40.7216317Z   persist-credentials: true
+2026-10-24T23:17:40.7216798Z   clean: true
+2026-10-24T23:17:40.7217224Z   sparse-checkout-cone-mode: true
+2026-10-24T23:17:40.7217736Z   fetch-depth: 1
+2026-10-24T23:17:40.7218160Z   fetch-tags: false
+2026-10-24T23:17:40.7218605Z   show-progress: true
+2026-10-24T23:17:40.7219052Z   lfs: false
+2026-10-24T23:17:40.7219457Z   submodules: false
+2026-10-24T23:17:40.7219895Z   set-safe-directory: true
+2026-10-24T23:17:40.7220389Z   allow-unsafe-pr-checkout: false
+2026-10-24T23:17:40.7221155Z ##[endgroup]
+2026-10-24T23:17:40.8275850Z Syncing repository: kumar1419alt/coursea
+2026-10-24T23:17:40.8278565Z ##[group]Getting Git version info
+2026-10-24T23:17:40.8279395Z Working directory is '/home/runner/work/coursea/coursea'
+2026-10-24T23:17:40.8280400Z [command]/usr/bin/git version
+2026-10-24T23:17:40.8351422Z git version 2.55.0
+2026-10-24T23:17:40.8383202Z ##[endgroup]
+2026-10-24T23:17:40.8401539Z Temporarily overriding HOME='/home/runner/work/_temp/3056ce12-8a52-4335-af7b-a7eb86764d1f' before making global git config changes
+2026-10-24T23:17:40.8403932Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-24T23:17:40.8408148Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/coursea/coursea
+2026-10-24T23:17:40.8465368Z Deleting the contents of '/home/runner/work/coursea/coursea'
+2026-10-24T23:17:40.8473543Z ##[group]Initializing the repository
+2026-10-24T23:17:40.8483835Z [command]/usr/bin/git init /home/runner/work/coursea/coursea
+2026-10-24T23:17:40.8601216Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-24T23:17:40.8603076Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-24T23:17:40.8605451Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-24T23:17:40.8607713Z hint: call:
+2026-10-24T23:17:40.8609243Z hint:
+2026-10-24T23:17:40.8610556Z hint: 	git config --global init.defaultBranch <name>
+2026-10-24T23:17:40.8612013Z hint:
+2026-10-24T23:17:40.8613136Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-24T23:17:40.8615144Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-24T23:17:40.8616932Z hint:
+2026-10-24T23:17:40.8617726Z hint: 	git branch -m <name>
+2026-10-24T23:17:40.8618666Z hint:
+2026-10-24T23:17:40.8619994Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-24T23:17:40.8622001Z Initialized empty Git repository in /home/runner/work/coursea/coursea/.git/
+2026-10-24T23:17:40.8624677Z [command]/usr/bin/git remote add origin https://github.com/kumar1419alt/coursea
+2026-10-24T23:17:40.8675929Z ##[endgroup]
+2026-10-24T23:17:40.8677391Z ##[group]Disabling automatic garbage collection
+2026-10-24T23:17:40.8680412Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-24T23:17:40.8714571Z ##[endgroup]
+2026-10-24T23:17:40.8716046Z ##[group]Setting up auth
+2026-10-24T23:17:40.8727144Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-24T23:17:40.8757107Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-24T23:17:40.9149999Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-24T23:17:40.9191971Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-24T23:17:40.9537338Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-24T23:17:40.9578608Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-24T23:17:40.9847352Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-24T23:17:40.9891809Z ##[endgroup]
+2026-10-24T23:17:40.9892741Z ##[group]Fetching the repository
+2026-10-24T23:17:40.9905018Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +cb0c598c4f301521a58d1ab6e4b02b6e72da5f7c:refs/remotes/origin/django-dealership-capstone
+2026-10-24T23:17:41.1970420Z From https://github.com/kumar1419alt/coursea
+2026-10-24T23:17:41.1972484Z  * [new ref]         cb0c598c4f301521a58d1ab6e4b02b6e72da5f7c -> origin/django-dealership-capstone
+2026-10-24T23:17:41.1977651Z ##[endgroup]
+2026-10-24T23:17:41.1979302Z ##[group]Determining the checkout info
+2026-10-24T23:17:41.1981332Z ##[endgroup]
+2026-10-24T23:17:41.1988087Z [command]/usr/bin/git sparse-checkout disable
+2026-10-24T23:17:41.2046013Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-24T23:17:41.2080652Z ##[group]Checking out the ref
+2026-10-24T23:17:41.2086842Z [command]/usr/bin/git checkout --progress --force -B django-dealership-capstone refs/remotes/origin/django-dealership-capstone
+2026-10-24T23:17:41.2195129Z Switched to a new branch 'django-dealership-capstone'
+2026-10-24T23:17:41.2201257Z branch 'django-dealership-capstone' set up to track 'origin/django-dealership-capstone'.
+2026-10-24T23:17:41.2207858Z ##[endgroup]
+2026-10-24T23:17:41.2254144Z [command]/usr/bin/git log -1 --format=%H
+2026-10-24T23:17:41.2281789Z cb0c598c4f301521a58d1ab6e4b02b6e72da5f7c
+2026-10-24T23:17:41.2578297Z ##[group]Run actions/setup-python@v5
+2026-10-24T23:17:41.2578883Z with:
+2026-10-24T23:17:41.2579285Z   python-version: 3.12
+2026-10-24T23:17:41.2580006Z   cache: pip
+2026-10-24T23:17:41.2580781Z   cache-dependency-path: server/requirements.txt
+server/djangoapp/microservices/requirements.txt
+
+2026-10-24T23:17:41.2653178Z   check-latest: false
+2026-10-24T23:17:41.2657798Z   token: ***
+2026-10-24T23:17:41.2658296Z   update-environment: true
+2026-10-24T23:17:41.2658844Z   allow-prereleases: false
+2026-10-24T23:17:41.2659362Z   freethreaded: false
+2026-10-24T23:17:41.2659807Z ##[endgroup]
+2026-10-24T23:17:41.3998875Z ##[group]Installed versions
+2026-10-24T23:17:41.4098528Z (node:2270) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-24T23:17:41.4100053Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-24T23:17:41.4101362Z Successfully set up CPython (3.12.15)
+2026-10-24T23:17:41.4102845Z ##[endgroup]
+2026-10-24T23:17:41.4462426Z [command]/opt/hostedtoolcache/Python/3.12.15/x64/bin/pip cache dir
+2026-10-24T23:17:41.7827091Z /home/runner/.cache/pip
+2026-10-24T23:17:41.8762286Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-f23f6fed04c06d59dd1f636f7069fd1a0aea4db95e2cd398733dbb32d1350f54
+2026-10-24T23:17:41.8902313Z (node:2270) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-24T23:17:42.1681572Z Received 19495753 of 19495753 (100.0%), 83.0 MBs/sec
+2026-10-24T23:17:42.1683037Z Cache Size: ~19 MB (19495753 B)
+2026-10-24T23:17:42.1711939Z [command]/usr/bin/tar -xf /home/runner/work/_temp/b4fd6dab-0c16-4edd-8484-cc472760b6ba/cache.tzst -P -C /home/runner/work/coursea/coursea --use-compress-program unzstd
+2026-10-24T23:17:42.2221266Z Cache restored successfully
+2026-10-24T23:17:42.2235844Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-f23f6fed04c06d59dd1f636f7069fd1a0aea4db95e2cd398733dbb32d1350f54
+2026-10-24T23:17:42.2472875Z ##[group]Run actions/setup-node@v4
+2026-10-24T23:17:42.2473294Z with:
+2026-10-24T23:17:42.2473574Z   node-version: 20
+2026-10-24T23:17:42.2473858Z   always-auth: false
+2026-10-24T23:17:42.2474161Z   check-latest: false
+2026-10-24T23:17:42.2477285Z   token: ***
+2026-10-24T23:17:42.2477568Z env:
+2026-10-24T23:17:42.2477930Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:42.2478510Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-24T23:17:42.2479066Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:42.2479547Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:42.2480026Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:42.2480521Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-24T23:17:42.2480932Z ##[endgroup]
+2026-10-24T23:17:42.3966106Z Attempting to download 20...
+2026-10-24T23:17:42.4074419Z (node:2303) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-24T23:17:42.4075963Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-24T23:17:43.0367608Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-10-24T23:17:43.3884268Z Extracting ...
+2026-10-24T23:17:43.4003032Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/c4a0d419-aea9-426e-8f0e-99d0844afd69 -f /home/runner/work/_temp/8d47cdfe-bf3d-436c-bce8-e6c7b96fb90a
+2026-10-24T23:17:44.4407590Z Adding to the cache ...
+2026-10-24T23:17:46.3370399Z ##[group]Environment details
+2026-10-24T23:17:46.5724311Z node: v20.20.2
+2026-10-24T23:17:46.5724843Z npm: 10.8.2
+2026-10-24T23:17:46.5725146Z yarn: 1.22.22
+2026-10-24T23:17:46.5726282Z ##[endgroup]
+2026-10-24T23:17:46.5930486Z ##[group]Run python -m pip install --upgrade pip
+2026-10-24T23:17:46.5931038Z [36;1mpython -m pip install --upgrade pip[0m
+2026-10-24T23:17:46.5931717Z [36;1mpip install -r server/requirements.txt[0m
+2026-10-24T23:17:46.5932232Z [36;1mpip install -r server/djangoapp/microservices/requirements.txt[0m
+2026-10-24T23:17:46.6211202Z shell: /usr/bin/bash -e {0}
+2026-10-24T23:17:46.6211738Z env:
+2026-10-24T23:17:46.6212285Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:46.6213116Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-24T23:17:46.6213925Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:46.6214658Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:46.6215398Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:46.6216655Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-24T23:17:46.6217311Z ##[endgroup]
+2026-10-24T23:17:47.2224310Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (26.2.1)
+2026-10-24T23:17:47.2472514Z Collecting pip
+2026-10-24T23:17:47.2487868Z   Using cached pip-26.2.2-py3-none-any.whl.metadata (4.6 kB)
+2026-10-24T23:17:47.2520906Z Using cached pip-26.2.2-py3-none-any.whl (1.8 MB)
+2026-10-24T23:17:47.3029800Z Installing collected packages: pip
+2026-10-24T23:17:47.3031035Z   Attempting uninstall: pip
+2026-10-24T23:17:47.3049501Z     Found existing installation: pip 26.2.1
+2026-10-24T23:17:47.4573343Z     Uninstalling pip-26.2.1:
+2026-10-24T23:17:47.4641959Z       Successfully uninstalled pip-26.2.1
+2026-10-24T23:17:48.4292210Z Successfully installed pip-26.2.2
+2026-10-24T23:17:48.8505959Z Collecting Django<5.3,>=4.2 (from -r server/requirements.txt (line 1))
+2026-10-24T23:17:48.8522906Z   Using cached django-5.2.18-py3-none-any.whl.metadata (4.1 kB)
+2026-10-24T23:17:48.8673139Z Collecting requests>=2.31 (from -r server/requirements.txt (line 2))
+2026-10-24T23:17:48.8692013Z   Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-10-24T23:17:49.0540655Z Collecting Pillow>=10.0 (from -r server/requirements.txt (line 3))
+2026-10-24T23:17:49.0554681Z   Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-10-24T23:17:49.0681856Z Collecting gunicorn>=21.2 (from -r server/requirements.txt (line 4))
+2026-10-24T23:17:49.0695259Z   Using cached gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+2026-10-24T23:17:49.0792742Z Collecting python-dotenv>=1.0 (from -r server/requirements.txt (line 5))
+2026-10-24T23:17:49.0805579Z   Using cached python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+2026-10-24T23:17:49.0920927Z Collecting asgiref>=3.8.1 (from Django<5.3,>=4.2->-r server/requirements.txt (line 1))
+2026-10-24T23:17:49.0932429Z   Using cached asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+2026-10-24T23:17:49.0999526Z Collecting sqlparse>=0.3.1 (from Django<5.3,>=4.2->-r server/requirements.txt (line 1))
+2026-10-24T23:17:49.1011943Z   Using cached sqlparse-0.6.0-py3-none-any.whl.metadata (6.0 kB)
+2026-10-24T23:17:49.2166776Z Collecting charset_normalizer<4,>=2 (from requests>=2.31->-r server/requirements.txt (line 2))
+2026-10-24T23:17:49.2181174Z   Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-10-24T23:17:49.2283394Z Collecting idna<4,>=2.5 (from requests>=2.31->-r server/requirements.txt (line 2))
+2026-10-24T23:17:49.2295581Z   Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-24T23:17:49.2442125Z Collecting urllib3<3,>=1.26 (from requests>=2.31->-r server/requirements.txt (line 2))
+2026-10-24T23:17:49.2453842Z   Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-24T23:17:49.2568303Z Collecting certifi>=2023.5.7 (from requests>=2.31->-r server/requirements.txt (line 2))
+2026-10-24T23:17:49.2580314Z   Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+2026-10-24T23:17:49.2632475Z Using cached django-5.2.18-py3-none-any.whl (8.3 MB)
+2026-10-24T23:17:49.2676498Z Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+2026-10-24T23:17:49.2690432Z Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+2026-10-24T23:17:49.2701641Z Using cached idna-3.20-py3-none-any.whl (69 kB)
+2026-10-24T23:17:49.2713533Z Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-10-24T23:17:49.2730522Z Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+2026-10-24T23:17:49.2770322Z Using cached gunicorn-26.2.0-py3-none-any.whl (228 kB)
+2026-10-24T23:17:49.2788118Z Using cached python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+2026-10-24T23:17:49.2801390Z Using cached asgiref-3.13.0-py3-none-any.whl (27 kB)
+2026-10-24T23:17:49.2812962Z Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+2026-10-24T23:17:49.2824616Z Using cached sqlparse-0.6.0-py3-none-any.whl (50 kB)
+2026-10-24T23:17:49.3906787Z Installing collected packages: urllib3, sqlparse, python-dotenv, Pillow, idna, gunicorn, charset_normalizer, certifi, asgiref, requests, Django
+2026-10-24T23:17:52.0048718Z 
+2026-10-24T23:17:52.0077414Z Successfully installed Django-5.2.18 Pillow-13.0.0 asgiref-3.13.0 certifi-2026.10.23 charset_normalizer-3.5.2 gunicorn-26.2.0 idna-3.20 python-dotenv-1.2.4 requests-2.34.2 sqlparse-0.6.0 urllib3-2.8.0
+2026-10-24T23:17:52.4144769Z Collecting Flask<4.0,>=3.0 (from -r server/djangoapp/microservices/requirements.txt (line 1))
+2026-10-24T23:17:52.4159029Z   Using cached flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+2026-10-24T23:17:52.4215033Z Collecting blinker>=1.9.0 (from Flask<4.0,>=3.0->-r server/djangoapp/microservices/requirements.txt (line 1))
+2026-10-24T23:17:52.4227286Z   Using cached blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2026-10-24T23:17:52.4320382Z Collecting click>=8.1.3 (from Flask<4.0,>=3.0->-r server/djangoapp/microservices/requirements.txt (line 1))
+2026-10-24T23:17:52.4332447Z   Using cached click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-24T23:17:52.4380425Z Collecting itsdangerous>=2.2.0 (from Flask<4.0,>=3.0->-r server/djangoapp/microservices/requirements.txt (line 1))
+2026-10-24T23:17:52.4391666Z   Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2026-10-24T23:17:52.4463614Z Collecting jinja2>=3.1.2 (from Flask<4.0,>=3.0->-r server/djangoapp/microservices/requirements.txt (line 1))
+2026-10-24T23:17:52.4481660Z   Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-10-24T23:17:52.4977030Z Collecting markupsafe>=2.1.1 (from Flask<4.0,>=3.0->-r server/djangoapp/microservices/requirements.txt (line 1))
+2026-10-24T23:17:52.4992024Z   Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-10-24T23:17:52.5109980Z Collecting werkzeug>=3.1.0 (from Flask<4.0,>=3.0->-r server/djangoapp/microservices/requirements.txt (line 1))
+2026-10-24T23:17:52.5122763Z   Using cached werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+2026-10-24T23:17:52.5176031Z Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+2026-10-24T23:17:52.5188427Z Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2026-10-24T23:17:52.5199919Z Using cached click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-24T23:17:52.5211839Z Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2026-10-24T23:17:52.5223051Z Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-10-24T23:17:52.5235909Z Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-10-24T23:17:52.5246170Z Using cached werkzeug-3.1.9-py3-none-any.whl (228 kB)
+2026-10-24T23:17:52.5678400Z Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+2026-10-24T23:17:52.9733908Z 
+2026-10-24T23:17:52.9756629Z Successfully installed Flask-3.1.3 blinker-1.9.0 click-8.5.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 werkzeug-3.1.9
+2026-10-24T23:17:53.0323927Z ##[group]Run python -m compileall -q server/djangoapp server/djangoproj
+2026-10-24T23:17:53.0324731Z [36;1mpython -m compileall -q server/djangoapp server/djangoproj[0m
+2026-10-24T23:17:53.0325186Z [36;1mcd server/djangoapp/microservices[0m
+2026-10-24T23:17:53.0325535Z [36;1mpython -m unittest test_app.py[0m
+2026-10-24T23:17:53.0394601Z shell: /usr/bin/bash -e {0}
+2026-10-24T23:17:53.0394903Z env:
+2026-10-24T23:17:53.0395226Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.0396086Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-24T23:17:53.0396641Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.0397116Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.0397601Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.0398104Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-24T23:17:53.0398566Z ##[endgroup]
+2026-10-24T23:17:53.4389784Z ....
+2026-10-24T23:17:53.4390476Z ----------------------------------------------------------------------
+2026-10-24T23:17:53.4391181Z Ran 4 tests in 0.118s
+2026-10-24T23:17:53.4391416Z 
+2026-10-24T23:17:53.4391546Z OK
+2026-10-24T23:17:53.4682848Z ##[group]Run node --check server/database/app.js
+2026-10-24T23:17:53.4683293Z [36;1mnode --check server/database/app.js[0m
+2026-10-24T23:17:53.4683680Z [36;1mnode --check server/database/dealership.js[0m
+2026-10-24T23:17:53.4684058Z [36;1mnode --check server/database/review.js[0m
+2026-10-24T23:17:53.4684449Z [36;1mnode --check server/database/inventory.js[0m
+2026-10-24T23:17:53.4685505Z [36;1mnode -e 'for (const f of process.argv.slice(1)) JSON.parse(require("fs").readFileSync(f, "utf8"))' server/database/data/dealerships.json server/database/data/reviews.json server/database/data/car_records.json[0m
+2026-10-24T23:17:53.4750406Z shell: /usr/bin/bash -e {0}
+2026-10-24T23:17:53.4750726Z env:
+2026-10-24T23:17:53.4751074Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.4751655Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-24T23:17:53.4752241Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.4773545Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.4774086Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.4774553Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-24T23:17:53.4774940Z ##[endgroup]
+2026-10-24T23:17:53.6087356Z ##[group]Run npm install --no-audit --no-fund
+2026-10-24T23:17:53.6087798Z [36;1mnpm install --no-audit --no-fund[0m
+2026-10-24T23:17:53.6088120Z [36;1mnpm run build[0m
+2026-10-24T23:17:53.6153064Z shell: /usr/bin/bash -e {0}
+2026-10-24T23:17:53.6153399Z env:
+2026-10-24T23:17:53.6153744Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.6154345Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-24T23:17:53.6154980Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.6155520Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.6156316Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:17:53.6156844Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-24T23:17:53.6157328Z   NODE_OPTIONS: --openssl-legacy-provider
+2026-10-24T23:17:53.6157697Z ##[endgroup]
+2026-10-24T23:18:18.6371183Z npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+2026-10-24T23:18:18.6744814Z npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+2026-10-24T23:18:19.4130036Z npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+2026-10-24T23:18:19.4662587Z npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+2026-10-24T23:18:19.4664716Z npm warn deprecated
+2026-10-24T23:18:19.4665309Z npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+2026-10-24T23:18:19.5173275Z npm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+2026-10-24T23:18:19.8027831Z npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+2026-10-24T23:18:20.2907778Z npm warn deprecated whatwg-encoding@1.0.5: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-10-24T23:18:20.3490643Z npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+2026-10-24T23:18:20.3504628Z npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+2026-10-24T23:18:20.3786845Z npm warn deprecated domexception@2.0.1: Use your platform's native DOMException instead
+2026-10-24T23:18:20.6568318Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-24T23:18:20.7114822Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-24T23:18:20.8983181Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-10-24T23:18:21.1230334Z npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+2026-10-24T23:18:21.4762393Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-10-24T23:18:21.6091577Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2026-10-24T23:18:21.9002529Z npm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+2026-10-24T23:18:21.9291470Z npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+2026-10-24T23:18:21.9293931Z npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+2026-10-24T23:18:21.9296905Z npm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+2026-10-24T23:18:21.9299902Z npm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+2026-10-24T23:18:23.1578731Z npm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+2026-10-24T23:18:24.4729761Z npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+2026-10-24T23:18:26.1546570Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-10-24T23:18:28.2583493Z 
+2026-10-24T23:18:28.2584458Z added 1306 packages in 35s
+2026-10-24T23:18:28.4014793Z 
+2026-10-24T23:18:28.4016327Z > best-cars-dealership-ui@1.0.0 build
+2026-10-24T23:18:28.4017018Z > react-scripts build
+2026-10-24T23:18:28.4017323Z 
+2026-10-24T23:18:29.3027013Z Creating an optimized production build...
+2026-10-24T23:18:34.9502217Z Compiled successfully.
+2026-10-24T23:18:34.9502578Z 
+2026-10-24T23:18:34.9502830Z File sizes after gzip:
+2026-10-24T23:18:34.9503122Z 
+2026-10-24T23:18:34.9592463Z   56.24 kB  build/static/js/main.b0d414f3.js
+2026-10-24T23:18:34.9593305Z   1.7 kB    build/static/css/main.387877b6.css
+2026-10-24T23:18:34.9593736Z 
+2026-10-24T23:18:34.9594843Z The project was built assuming it is hosted at /.
+2026-10-24T23:18:34.9596101Z You can control this with the homepage field in your package.json.
+2026-10-24T23:18:34.9596675Z 
+2026-10-24T23:18:34.9597017Z The build folder is ready to be deployed.
+2026-10-24T23:18:34.9597817Z You may serve it with a static server:
+2026-10-24T23:18:34.9598190Z 
+2026-10-24T23:18:34.9598662Z   npm install -g serve
+2026-10-24T23:18:34.9599156Z   serve -s build
+2026-10-24T23:18:34.9600218Z 
+2026-10-24T23:18:34.9600757Z Find out more about deployment here:
+2026-10-24T23:18:34.9601143Z 
+2026-10-24T23:18:34.9601604Z   https://cra.link/deployment
+2026-10-24T23:18:34.9602562Z 
+2026-10-24T23:18:34.9994831Z ##[group]Run python manage.py check
+2026-10-24T23:18:34.9995202Z [36;1mpython manage.py check[0m
+2026-10-24T23:18:35.0059737Z shell: /usr/bin/bash -e {0}
+2026-10-24T23:18:35.0060038Z env:
+2026-10-24T23:18:35.0060354Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:18:35.0060911Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-24T23:18:35.0061469Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:18:35.0061940Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:18:35.0062409Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-24T23:18:35.0062897Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-24T23:18:35.0063337Z   DJANGO_SECRET_KEY: ci-only-secret-key
+2026-10-24T23:18:35.0063688Z   DJANGO_DEBUG: true
+2026-10-24T23:18:35.0063997Z   DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1
+2026-10-24T23:18:35.0064395Z   BACKEND_URL: http://127.0.0.1:3030
+2026-10-24T23:18:35.0064820Z   SENTIMENT_ANALYZER_URL: http://127.0.0.1:5050
+2026-10-24T23:18:35.0065200Z ##[endgroup]
+2026-10-24T23:18:36.0677043Z System check identified no issues (0 silenced).
+2026-10-24T23:18:36.1372855Z Post job cleanup.
+2026-10-24T23:18:36.2631072Z (node:2517) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-24T23:18:36.2633867Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-24T23:18:36.2763159Z Post job cleanup.
+2026-10-24T23:18:36.4159802Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-f23f6fed04c06d59dd1f636f7069fd1a0aea4db95e2cd398733dbb32d1350f54, not saving cache.
+2026-10-24T23:18:36.4162592Z (node:2525) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-24T23:18:36.4164268Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-24T23:18:36.4334349Z Post job cleanup.
+2026-10-24T23:18:36.5213066Z [command]/usr/bin/git version
+2026-10-24T23:18:36.5261130Z git version 2.55.0
+2026-10-24T23:18:36.5301921Z Temporarily overriding HOME='/home/runner/work/_temp/82e0bb89-edc7-484c-9e9f-d180f9d6b694' before making global git config changes
+2026-10-24T23:18:36.5303447Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-24T23:18:36.5308180Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/coursea/coursea
+2026-10-24T23:18:36.5350567Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-24T23:18:36.5391874Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-24T23:18:36.5649874Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-24T23:18:36.5689690Z http.https://github.com/.extraheader
+2026-10-24T23:18:36.5703074Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-24T23:18:36.5738940Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-24T23:18:36.6003329Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-24T23:18:36.6044629Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-24T23:18:36.6511616Z Cleaning up orphan processes
+2026-10-24T23:18:36.6810127Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
