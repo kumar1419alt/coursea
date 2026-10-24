@@ -1,0 +1,51 @@
+services:
+  mongo_db:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  dealer-api:
+    build: ./database
+    environment:
+      PORT: 3030
+      MONGO_URL: mongodb://mongo_db:27017/dealershipsDB
+    ports:
+      - "3030:3030"
+    depends_on:
+      mongo_db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  sentiment:
+    build: ./djangoapp/microservices
+    environment:
+      PORT: 5050
+    ports:
+      - "5050:5050"
+    restart: unless-stopped
+
+  web:
+    build: .
+    environment:
+      DJANGO_SECRET_KEY: local-compose-key-change-for-production
+      DJANGO_DEBUG: "false"
+      DJANGO_ALLOWED_HOSTS: "*"
+      BACKEND_URL: http://dealer-api:3030
+      SENTIMENT_ANALYZER_URL: http://sentiment:5050
+    ports:
+      - "8000:8000"
+    depends_on:
+      - dealer-api
+      - sentiment
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
