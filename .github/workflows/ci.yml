@@ -76,7 +76,9 @@ jobs:
           DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1
           BACKEND_URL: http://127.0.0.1:3030
           SENTIMENT_ANALYZER_URL: http://127.0.0.1:5050
-        run: python manage.py check
+        run: |
+          python manage.py check
+          python manage.py makemigrations --check --dry-run
 
       - name: Start services and capture real cURL evidence
         if: github.event_name == 'push' && github.ref == 'refs/heads/django-dealership-capstone'
