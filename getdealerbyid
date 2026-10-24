@@ -1,0 +1,16 @@
+$ curl -fsS 'http://127.0.0.1:3030/fetchDealer/2' | python -m json.tool
+
+{
+    "_id": "6add3e67debcd404c0b908ce",
+    "id": 2,
+    "city": "Minneapolis",
+    "state": "Minnesota",
+    "st": "MN",
+    "address": "6337 Butternut Crossing",
+    "zip": "55402",
+    "lat": 44.9762,
+    "long": -93.2759,
+    "short_name": "Temp",
+    "full_name": "Temp Car Dealership"
+}
+

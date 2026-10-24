@@ -1,0 +1,10 @@
+$ curl -fsS 'http://127.0.0.1:5050/analyze/Fantastic%20services' | python -m json.tool
+
+{
+    "negative_terms": 0,
+    "positive_terms": 1,
+    "score": 1,
+    "sentiment": "positive",
+    "text": "Fantastic services"
+}
+

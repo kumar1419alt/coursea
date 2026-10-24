@@ -1,0 +1,84 @@
+$ curl -fsS 'http://127.0.0.1:8000/djangoapp/get_cars' | python -m json.tool
+
+{
+    "CarModels": [
+        {
+            "CarModel": "A4",
+            "CarMake": "Audi",
+            "Year": 2024,
+            "Type": "SEDAN",
+            "Color": "Gray"
+        },
+        {
+            "CarModel": "Q5",
+            "CarMake": "Audi",
+            "Year": 2025,
+            "Type": "SUV",
+            "Color": "Blue"
+        },
+        {
+            "CarModel": "K5",
+            "CarMake": "Kia",
+            "Year": 2023,
+            "Type": "SEDAN",
+            "Color": "White"
+        },
+        {
+            "CarModel": "Sportage",
+            "CarMake": "Kia",
+            "Year": 2024,
+            "Type": "SUV",
+            "Color": "Red"
+        },
+        {
+            "CarModel": "C-Class",
+            "CarMake": "Mercedes-Benz",
+            "Year": 2024,
+            "Type": "SEDAN",
+            "Color": "Black"
+        },
+        {
+            "CarModel": "GLC",
+            "CarMake": "Mercedes-Benz",
+            "Year": 2025,
+            "Type": "SUV",
+            "Color": "White"
+        },
+        {
+            "CarModel": "Altima",
+            "CarMake": "Nissan",
+            "Year": 2024,
+            "Type": "SEDAN",
+            "Color": "Black"
+        },
+        {
+            "CarModel": "Rogue",
+            "CarMake": "Nissan",
+            "Year": 2025,
+            "Type": "SUV",
+            "Color": "Gray"
+        },
+        {
+            "CarModel": "Camry",
+            "CarMake": "Toyota",
+            "Year": 2024,
+            "Type": "SEDAN",
+            "Color": "Silver"
+        },
+        {
+            "CarModel": "Corolla",
+            "CarMake": "Toyota",
+            "Year": 2023,
+            "Type": "SEDAN",
+            "Color": "White"
+        },
+        {
+            "CarModel": "RAV4",
+            "CarMake": "Toyota",
+            "Year": 2025,
+            "Type": "SUV",
+            "Color": "Blue"
+        }
+    ]
+}
+

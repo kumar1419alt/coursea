@@ -1,0 +1,7 @@
+$ curl -c <cookie-jar> -H "Content-Type: application/json" -d {"userName":"$DEMO_USERNAME","password":"$DEMO_PASSWORD"} http://127.0.0.1:8000/djangoapp/login
+
+{
+    "userName": "capstone-demo",
+    "status": "Authenticated"
+}
+

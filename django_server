@@ -1,0 +1,20 @@
+$ cd server && python manage.py runserver 0.0.0.0:8000 --noreload
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 24, 2026 - 23:25:31
+Django version 5.2.18, using settings 'djangoproj.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+[24/Oct/2026 23:25:32] "GET /djangoapp/health HTTP/1.1" 200 16
+[24/Oct/2026 23:25:32] "GET /djangoapp/health HTTP/1.1" 200 16
+[24/Oct/2026 23:25:32] "GET /djangoapp/get_cars HTTP/1.1" 200 1023
+[24/Oct/2026 23:25:33] "POST /djangoapp/login HTTP/1.1" 200 56
+[24/Oct/2026 23:25:33] "POST /djangoapp/logout HTTP/1.1" 200 40
+
+$ curl -fsS http://127.0.0.1:8000/djangoapp/health
+{"status": "ok"}
