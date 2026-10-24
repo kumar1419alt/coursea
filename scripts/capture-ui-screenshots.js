@@ -97,10 +97,10 @@ async function main() {
   await admin.locator("#id_password").fill(ADMIN_PASSWORD);
   await admin.locator('input[type="submit"]').click();
   await admin.locator("#content-main").waitFor({ timeout: 20000 });
-  await admin.getByRole("link", { name: /Log out/i }).waitFor();
+  await admin.getByRole("button", { name: /Log out/i }).waitFor();
   await desktopShot(admin, "admin_login.png");
 
-  await admin.getByRole("link", { name: /Log out/i }).click();
+  await admin.getByRole("button", { name: /Log out/i }).click();
   await admin.waitForTimeout(700);
   // Prefer the logout confirmation page if Django renders it. If it redirects, capture the logged-out login page.
   if (!(await admin.locator("#content").count())) {
