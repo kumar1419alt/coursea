@@ -35,3 +35,24 @@ API endpoints:
 ## Submission evidence
 
 The repository includes scripts/capture-api-evidence.sh, which records live API responses when services are running. It does not manufacture browser screenshots, deployment URLs, login results, or successful CI output. Capture those artifacts from the actual lab/cloud session after deployment.
+
+
+## Kubernetes deployment notes
+
+A starter manifest is provided at server/deployment.yaml. Before applying it:
+
+1. Build and push three images to IBM Container Registry using your own namespace: bestcars-web (build with server/Dockerfile), bestcars-dealer-api (build with server/database/Dockerfile), and bestcars-sentiment (build with server/djangoapp/microservices/Dockerfile).
+2. Replace every REPLACE_WITH_ICR_NAMESPACE in the manifest with the namespace you actually own.
+3. Create a strong Django secret in the target cluster:
+   
+       kubectl create secret generic bestcars-secret --from-literal=DJANGO_SECRET_KEY="$(python -c 'import secrets; print(secrets.token_urlsafe(50))')"
+
+4. Apply the manifest and wait for the LoadBalancer service to receive an external IP:
+
+       kubectl apply -f server/deployment.yaml
+       kubectl get pods
+       kubectl get svc bestcars-web
+
+5. Use the actual external address printed by the service as the deploymentURL. Capture the deployed screenshots only after you can visit that address successfully.
+
+These are deployment instructions and manifests only. They do not create cloud resources by themselves and have not been applied to an IBM cluster from this repository integration.
