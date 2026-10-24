@@ -1,23 +1,25 @@
 # Best Cars — Full-Stack Dealership Capstone
 
-A Django + React application for exploring car dealerships, filtering locations by state, reviewing dealers, and managing car make/model data. An Express API provides dealer/review data, and a sentiment service analyses submitted review text.
+This branch contains the Django + React car-dealership capstone project. Use this branch when working on the capstone; the repository's default branch has not been changed.
 
-## Project structure
+## What is included
 
-- `server/djangoproj/`: Django settings and URL configuration
-- `server/djangoapp/`: Django auth, car models, dealer/review proxy endpoints
-- `server/database/`: Express dealer/review API and JSON starter data
-- `server/frontend/`: React frontend and static About/Contact pages
-- `.github/workflows/`: CI checks
+- Django user registration, login/logout, car make/model models and Django admin
+- React registration (all five required fields), login, dealer list/state filtering, dealer details/reviews, and post-review forms
+- Express + MongoDB dealer/review API with seed data
+- Flask sentiment-analysis endpoint for development
+- Dockerfiles, Docker Compose, GitHub Actions CI, and an evidence-capture script
+- Updated About Us and Contact Us pages with valid CSS paths, active navigation states, staff profiles, images, and contact details
 
-## Local setup
+## Start locally
 
-See `server/README.md` for the development setup and required services. Runtime evidence and cloud deployment URLs must be collected from a real lab/cloud session; this repository intentionally does not invent server logs, API output, screenshots, or deployment URLs.
+    cd server
+    docker compose up --build
 
-## Capstone state
+Open http://localhost:8000. See server/README.md for service endpoints and development alternatives.
 
-Source code is staged in Git. A real deployment, successful GitHub Actions run, cURL response evidence, and browser screenshots are pending execution in the student's IBM Skills Network environment.
+## Important: submission evidence
 
-## Attribution
+Only code and CI checks can be prepared in Git without running the user's lab. Actual cURL response files must be generated against running services. The Django server log, authenticated admin screenshots, browser screenshots, IBM deployment URL, and successful deployment evidence must be captured from the real lab/cloud session. They are not fabricated or represented as complete here.
 
-The assignment is based on the IBM Full Stack Software Developer car dealership capstone. See `LICENSE` and comments in adapted starter files for attribution.
+Run scripts/capture-api-evidence.sh from the repository root after starting the services. See submission-evidence.md for the file checklist.

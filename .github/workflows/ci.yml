@@ -1,0 +1,68 @@
+name: Best Cars CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate application
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            server/requirements.txt
+            server/djangoapp/microservices/requirements.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r server/requirements.txt
+          pip install -r server/djangoapp/microservices/requirements.txt
+
+      - name: Compile Python and test sentiment endpoint
+        run: |
+          python -m compileall -q server/djangoapp server/djangoproj
+          cd server/djangoapp/microservices
+          python -m unittest test_app.py
+
+      - name: Validate dealer API JavaScript and seed JSON
+        run: |
+          node --check server/database/app.js
+          node --check server/database/dealership.js
+          node --check server/database/review.js
+          node --check server/database/inventory.js
+          node -e 'for (const f of process.argv.slice(1)) JSON.parse(require("fs").readFileSync(f, "utf8"))' server/database/data/dealerships.json server/database/data/reviews.json server/database/data/car_records.json
+
+      - name: Install frontend dependencies and build React
+        working-directory: server/frontend
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+
+      - name: Check Django configuration
+        working-directory: server
+        env:
+          DJANGO_SECRET_KEY: ci-only-secret-key
+          DJANGO_DEBUG: "true"
+          DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1
+          BACKEND_URL: http://127.0.0.1:3030
+          SENTIMENT_ANALYZER_URL: http://127.0.0.1:5050
+        run: python manage.py check

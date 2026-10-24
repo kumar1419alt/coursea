@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env
+.venv/
+venv/
+staticfiles/
+# Node
+node_modules/
+server/frontend/node_modules/
+server/frontend/build/
+npm-debug.log*
+# Local session/evidence artifacts
+.cookiejar
+.DS_Store
