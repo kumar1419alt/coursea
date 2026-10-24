@@ -80,6 +80,14 @@ jobs:
           python manage.py check
           python manage.py makemigrations --check --dry-run
 
+      - name: Install Playwright and desktop screenshot utility
+        if: github.event_name == 'push' && github.ref == 'refs/heads/django-dealership-capstone'
+        run: |
+          npm --prefix server/frontend install --no-save --no-package-lock --no-audit --no-fund playwright@1.56.1
+          server/frontend/node_modules/.bin/playwright install --with-deps chromium
+          sudo apt-get update
+          sudo apt-get install -y scrot
+
       - name: Start services and capture real cURL evidence
         if: github.event_name == 'push' && github.ref == 'refs/heads/django-dealership-capstone'
         env:
@@ -124,6 +132,13 @@ jobs:
             python manage.py shell -c 'import os; from django.contrib.auth import get_user_model; User = get_user_model(); user, _ = User.objects.get_or_create(username="capstone-demo", defaults={"email":"capstone-demo@example.test"}); user.set_password(os.environ["DEMO_PASSWORD"]); user.save()'
           )
 
+          export ADMIN_PASSWORD="$(python -c 'import secrets; print(secrets.token_urlsafe(18))')"
+          echo "::add-mask::$ADMIN_PASSWORD"
+          (
+            cd server
+            python manage.py shell -c 'import os; from django.contrib.auth import get_user_model; User = get_user_model(); user, _ = User.objects.get_or_create(username="root", defaults={"email":"root@example.test"}); user.is_staff = True; user.is_superuser = True; user.set_password(os.environ["ADMIN_PASSWORD"]); user.save()'
+          )
+
           (
             cd server
             python manage.py runserver 0.0.0.0:8000 --noreload
@@ -141,6 +156,13 @@ jobs:
           SENTIMENT_URL=http://127.0.0.1:5050 \
           bash scripts/capture-api-evidence.sh
 
+          NODE_PATH="$GITHUB_WORKSPACE/server/frontend/node_modules" \
+          BASE_URL=http://127.0.0.1:8000 \
+          DEMO_USERNAME="$DEMO_USERNAME" \
+          DEMO_PASSWORD="$DEMO_PASSWORD" \
+          ADMIN_PASSWORD="$ADMIN_PASSWORD" \
+          xvfb-run -a -s "-screen 0 1600x1100x24" node scripts/capture-ui-screenshots.js
+
           {
             printf '$ cd server && python manage.py runserver 0.0.0.0:8000 --noreload\n\n'
             cat /tmp/bestcars-django-server.log
@@ -157,10 +179,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add django_server loginuser logoutuser getdealerreviews getalldealers getdealerbyid getdealersbyState getallcarmakes analyzereview
+          git add django_server loginuser logoutuser getdealerreviews getalldealers getdealerbyid getdealersbyState getallcarmakes analyzereview admin_login.png admin_logout.png get_dealers.png get_dealers_loggedin.png dealersbystate.png dealer_id_reviews.png dealership_review_submission.png added_review.png
           if git diff --cached --quiet; then
             echo "No new API evidence changes to commit."
             exit 0
           fi
-          git commit -m "Capture live API evidence from CI [skip ci]"
+          git commit -m "Capture live API and browser evidence from CI [skip ci]"
           git push origin HEAD:refs/heads/django-dealership-capstone

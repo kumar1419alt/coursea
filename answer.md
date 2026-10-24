@@ -13,23 +13,25 @@ https://github.com/kumar1419alt/coursea/blob/django-dealership-capstone/server/f
 Task 4 — Contact Us page:
 https://github.com/kumar1419alt/coursea/blob/django-dealership-capstone/server/frontend/static/Contact.html
 
-Task 7 — Register component (Username, First Name, Last Name, Email, Password and Register button):
+Task 7 — Register component with all five required input fields:
 https://github.com/kumar1419alt/coursea/blob/django-dealership-capstone/server/frontend/src/components/Register/Register.jsx
 
-CI workflow definition:
+## Runtime evidence files
+
+The root of this branch contains the real CICD log and the live curl output files requested by the rubric:
+- django_server
+- loginuser
+- logoutuser
+- getdealerreviews
+- getalldealers
+- getdealerbyid
+- getdealersbyState
+- getallcarmakes
+- analyzereview
+
+The GitHub Actions workflow is configured to generate browser screenshots for local app tasks from a headed browser session, with its real address bar visible:
 https://github.com/kumar1419alt/coursea/blob/django-dealership-capstone/.github/workflows/ci.yml
 
-API evidence generation script:
-https://github.com/kumar1419alt/coursea/blob/django-dealership-capstone/scripts/capture-api-evidence.sh
+## Deployment status
 
-## How to create the live API evidence files
-
-1. Start the services using the directions in server/README.md.
-2. Create a test account in the app's Register page.
-3. From the repository root, export DEMO_USERNAME and DEMO_PASSWORD in your shell.
-4. Run bash scripts/capture-api-evidence.sh. It captures the actual JSON responses for dealer reviews, all dealers, one dealer, Kansas dealers, car makes/models, and the sentiment phrase “Fantastic services”. If login credentials are set, it also creates loginuser and logoutuser using a cookie jar.
-5. Capture django_server from the real Django server console, and take the rubric-required browser screenshots with the URL/address bar visible.
-
-## Not claimed complete
-
-This branch has code and automated CI validation, but it is not yet deployed to IBM Cloud/Kubernetes. The deploymentURL and deployed_*.png screenshots must be completed from the course's actual cloud/lab account. No live deployment URL, login response, server log, or screenshot has been fabricated.
+The project includes a Kubernetes manifest and Docker Compose instructions, but it has not been deployed to IBM Cloud. IBM Cloud returned “No account is found” for the currently logged-in IBM ID, and its lab API key did not authenticate. Consequently there is no real deployment URL or deployed-app screenshot yet; those artifacts must be captured when the correct course-provided account/cluster is available.
