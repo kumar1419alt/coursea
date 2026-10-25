@@ -1,4 +1,4 @@
-$ curl -b <cookie-jar> -X POST http://127.0.0.1:8000/djangoapp/logout
+$ curl -X POST -b "/tmp/bestcars-evidence-cookies.txt" -c "/tmp/bestcars-evidence-cookies.txt" "http://127.0.0.1:8000/djangoapp/logout"
 
 {
     "userName": "",
