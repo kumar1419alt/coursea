@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Header from "../Header/Header";
 
 export default function Dealers() {
+  const { state: routeState } = useParams();
+  const navigate = useNavigate();
   const [dealers, setDealers] = useState([]);
-  const [state, setState] = useState("All");
+  const [state, setState] = useState(routeState || "All");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const username = sessionStorage.getItem("username") || "";
+
+  // Keep the selected state encoded in the page URL so filter screenshots and shared links are verifiable.
+  useEffect(() => {
+    setState(routeState || "All");
+  }, [routeState]);
 
   useEffect(() => {
     let cancelled = false;
@@ -42,7 +49,11 @@ export default function Dealers() {
     </section>
     <section id="dealer-list">
       <div className="toolbar"><div><p className="eyebrow">Trusted local service</p><h2>Dealership directory</h2></div>
-        <label className="filter"><span className="field-label">Filter by state</span><select value={state} onChange={(e) => setState(e.target.value)}>{stateNames.map((item) => <option key={item}>{item}</option>)}</select></label>
+        <label className="filter"><span className="field-label">Filter by state</span><select value={state} onChange={(e) => {
+          const nextState = e.target.value;
+          setState(nextState);
+          navigate(nextState === "All" ? "/" : "/get_dealers/" + encodeURIComponent(nextState));
+        }}>{stateNames.map((item) => <option key={item}>{item}</option>)}</select></label>
       </div>
       {loading && <p className="status">Loading dealerships…</p>}
       {error && <p className="status error" role="alert">{error} Make sure the Express/Mongo service is running.</p>}

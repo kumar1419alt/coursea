@@ -1,3 +1,53 @@
+VERBOSE GITHUB ACTIONS JOB SUMMARY — CURRENT SUCCESSFUL RUN
+$ gh run view 40169168450 --verbose
+✓ django-dealership-capstone Best Cars CI · 40169168450
+Triggered via push on 2026-10-25
+
+JOBS
+✓ Lint Python in 8s (ID 121096330862)
+✓ Set up job
+✓ Check out source
+✓ Set up Python
+✓ Install Ruff
+✓ Lint Python source
+✓ Post Set up Python
+✓ Post Check out source
+✓ Complete job
+
+✓ Lint JavaScript in 13s (ID 121096330973)
+✓ Set up job
+✓ Check out source
+✓ Set up Node.js
+✓ Run ESLint static checks
+✓ Post Set up Node.js
+✓ Post Check out source
+✓ Complete job
+
+✓ Validate application in 2m 40s (ID 121096331013)
+✓ Set up job
+✓ Initialize containers
+✓ Check out source
+✓ Set up Python
+✓ Set up Node.js
+✓ Install Python dependencies
+✓ Compile Python and test sentiment endpoint
+✓ Validate dealer API JavaScript and seed JSON
+✓ Install frontend dependencies and build React
+✓ Check Django configuration
+✓ Install Playwright and desktop screenshot utility
+✓ Start services and capture real cURL evidence
+✓ Commit live cURL evidence to this branch
+✓ Post Set up Node.js
+✓ Post Set up Python
+✓ Post Check out source
+✓ Stop containers
+✓ Complete job
+
+Overall conclusion: success
+Run URL: https://github.com/kumar1419alt/coursea/actions/runs/40169168450
+NOTE: Job IDs, durations and step names above are from the actual GitHub Actions jobs endpoint. The full timestamped raw logs from prior successful job runs follow below.
+
+==========================================================================================
 VERBOSE GITHUB ACTIONS JOB SUMMARY (real job metadata; full raw logs follow)
 $ gh run view 40166545039 --verbose
 ✓ django-dealership-capstone Best Cars CI · 40166545039
