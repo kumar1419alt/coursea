@@ -1,5 +1,8 @@
 # Best Cars — Full-Stack Dealership Capstone
 
+**Repository name:** `coursea`  
+**Project name:** Best Cars — Car Dealership and Customer Review Platform
+
 This branch contains the Django + React car-dealership capstone project. Use this branch when working on the capstone; the repository's default branch has not been changed.
 
 ## What is included

@@ -38,8 +38,8 @@ export default function Register() {
   }
 
   return <><Header /><main className="page"><section className="panel form-panel register-panel">
-    <p className="eyebrow">Create an account</p>
-    <h1>Join the Best Cars community</h1>
+    <p className="eyebrow">Sign-up</p>
+    <h1>Sign-up for Best Cars</h1>
     <p className="subheading">Sign up to share a review of your dealership experience.</p>
     {error && <div className="status error" role="alert">{error}</div>}
     <form onSubmit={submit}>
