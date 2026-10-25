@@ -1,0 +1,50 @@
+[
+  {
+    "id": "course-js-foundations",
+    "title": "JavaScript Foundations",
+    "instructor": "Maya Chen",
+    "category": "Web Development",
+    "level": "beginner",
+    "status": "published",
+    "duration": "6 hours",
+    "description": "Learn variables, functions, arrays, objects, and modern JavaScript fundamentals through practical exercises.",
+    "createdAt": "2026-01-12T09:00:00.000Z",
+    "updatedAt": "2026-01-12T09:00:00.000Z"
+  },
+  {
+    "id": "course-rest-apis",
+    "title": "REST APIs with Node.js",
+    "instructor": "Jordan Patel",
+    "category": "Backend Engineering",
+    "level": "intermediate",
+    "status": "published",
+    "duration": "8 hours",
+    "description": "Design reliable REST endpoints, validate input, handle HTTP status codes, and connect an API to persistent JSON storage.",
+    "createdAt": "2026-02-03T10:30:00.000Z",
+    "updatedAt": "2026-02-10T11:00:00.000Z"
+  },
+  {
+    "id": "course-python-data",
+    "title": "Python for Data Tasks",
+    "instructor": "Alex Rivera",
+    "category": "Data Science",
+    "level": "beginner",
+    "status": "draft",
+    "duration": "5 hours",
+    "description": "Use Python collections, functions, file handling, and small data transformations to automate everyday tasks.",
+    "createdAt": "2026-03-18T08:15:00.000Z",
+    "updatedAt": "2026-03-18T08:15:00.000Z"
+  },
+  {
+    "id": "course-system-design",
+    "title": "Practical System Design",
+    "instructor": "Sam Okafor",
+    "category": "Software Architecture",
+    "level": "advanced",
+    "status": "archived",
+    "duration": "10 hours",
+    "description": "Explore scalability, caching, queues, service boundaries, and trade-offs in production-oriented system design.",
+    "createdAt": "2025-11-04T14:00:00.000Z",
+    "updatedAt": "2026-01-08T14:00:00.000Z"
+  }
+]
