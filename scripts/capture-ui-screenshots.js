@@ -88,7 +88,13 @@ async function main() {
   const newReview = page.locator(".review").filter({ hasText: reviewText });
   await newReview.waitFor({ timeout: 20000 });
   await newReview.scrollIntoViewIfNeeded();
-  await desktopShot(page, "added_review.png");
+  await page.bringToFront();
+  await page.waitForTimeout(500);
+  const postedReviewScreenshot = path.resolve(process.cwd(), "added_review.png");
+  if (fs.existsSync(postedReviewScreenshot)) fs.unlinkSync(postedReviewScreenshot);
+  await page.screenshot({ path: postedReviewScreenshot, fullPage: false });
+  console.log("Captured focused application viewport showing the posted review: added_review.png (" +
+    fs.statSync(postedReviewScreenshot).size + " bytes)");
 
   // Tasks 12-13: authenticate as a temporary Django superuser named root, then log out.
   const admin = await context.newPage();
