@@ -1,5 +1,7 @@
 # Best Cars — Full-Stack Dealership Capstone
 
+## Required project metadata
+
 **Repository name:** `coursea`  
 **Project name:** Best Cars — Car Dealership and Customer Review Platform
 

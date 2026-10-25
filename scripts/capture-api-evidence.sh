@@ -49,12 +49,10 @@ capture analyzereview \
 if [[ -n "${DEMO_USERNAME:-}" && -n "${DEMO_PASSWORD:-}" ]]; then
   body="$(DEMO_USERNAME="$DEMO_USERNAME" DEMO_PASSWORD="$DEMO_PASSWORD" python -c 'import json,os; print(json.dumps({"userName":os.environ["DEMO_USERNAME"],"password":os.environ["DEMO_PASSWORD"]}))')"
 
-  login_command="$(cat <<'LOGIN_COMMAND'
-curl -X POST -c "__COOKIE_JAR__" -H "Content-Type: application/json" --data-raw "$(printf '{"userName":"%s","password":"%s"}' "$DEMO_USERNAME" "$DEMO_PASSWORD")" "__BASE_URL__/djangoapp/login"
+  login_command="$(cat <<LOGIN_COMMAND
+curl -X POST -c "$COOKIE_JAR" -H "Content-Type: application/json" --data-raw '{"userName":"$DEMO_USERNAME","password":"$DEMO_PASSWORD"}' "$BASE_URL/djangoapp/login"
 LOGIN_COMMAND
 )"
-  login_command="${login_command//__COOKIE_JAR__/$COOKIE_JAR}"
-  login_command="${login_command//__BASE_URL__/$BASE_URL}"
   {
     printf '$ %s\n\n' "$login_command"
     curl --fail --silent --show-error -X POST -c "$COOKIE_JAR" -H "Content-Type: application/json" --data-raw "$body" "$BASE_URL/djangoapp/login" | python -m json.tool
@@ -62,15 +60,13 @@ LOGIN_COMMAND
   } > "$ROOT_DIR/loginuser"
   printf 'Captured loginuser\n'
 
-  logout_command="$(cat <<'LOGOUT_COMMAND'
-curl -X POST -b "__COOKIE_JAR__" -c "__COOKIE_JAR__" "__BASE_URL__/djangoapp/logout"
+  logout_command="$(cat <<LOGOUT_COMMAND
+curl -X GET -b "$COOKIE_JAR" "$BASE_URL/djangoapp/logout"
 LOGOUT_COMMAND
 )"
-  logout_command="${logout_command//__COOKIE_JAR__/$COOKIE_JAR}"
-  logout_command="${logout_command//__BASE_URL__/$BASE_URL}"
   {
     printf '$ %s\n\n' "$logout_command"
-    curl --fail --silent --show-error -X POST -b "$COOKIE_JAR" -c "$COOKIE_JAR" "$BASE_URL/djangoapp/logout" | python -m json.tool
+    curl --fail --silent --show-error -X GET -b "$COOKIE_JAR" "$BASE_URL/djangoapp/logout" | python -m json.tool
     printf '\n'
   } > "$ROOT_DIR/logoutuser"
   rm -f "$COOKIE_JAR"

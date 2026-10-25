@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_GET, require_POST
+from django.views.decorators.http import require_GET, require_POST, require_http_methods
 from .models import CarMake, CarModel
 from .populate import initiate
 from .restapis import get_request, analyze_review_sentiments, post_review
@@ -35,7 +35,7 @@ def login_user(request):
 
 
 @csrf_exempt
-@require_POST
+@require_http_methods(["GET", "POST"])
 def logout_request(request):
     logout(request)
     return JsonResponse({"userName": "", "status": "Logged out"})
@@ -66,8 +66,8 @@ def registration(request):
 
 @require_GET
 def get_cars(request):
-    if not CarMake.objects.exists():
-        initiate()
+    # Re-run idempotent seeding so newly added models appear in an existing database.
+    initiate()
     cars = [
         {"CarModel": item.name, "CarMake": item.car_make.name,
          "Year": item.year, "Type": item.type, "Color": item.color}

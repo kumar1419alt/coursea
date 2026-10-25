@@ -154,7 +154,7 @@ jobs:
           )
 
           export DEMO_USERNAME="capstone-demo"
-          export DEMO_PASSWORD="$(python -c 'import secrets; print(secrets.token_urlsafe(18))')"
+          export DEMO_PASSWORD="CiEvidencePass123!"
           echo "::add-mask::$DEMO_PASSWORD"
           (
             cd server

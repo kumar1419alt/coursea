@@ -8,18 +8,22 @@ def initiate():
             ("Camry", "SEDAN", 2024, "Silver"),
             ("Corolla", "SEDAN", 2023, "White"),
             ("RAV4", "SUV", 2025, "Blue"),
+            ("Prius", "HATCHBACK", 2024, "Silver"),
         ]),
         "Nissan": ("Practical vehicles for everyday driving", [
             ("Altima", "SEDAN", 2024, "Black"),
             ("Rogue", "SUV", 2025, "Gray"),
+            ("Pathfinder", "SUV", 2024, "Gray"),
         ]),
         "Mercedes-Benz": ("Premium German automobiles", [
             ("C-Class", "SEDAN", 2024, "Black"),
             ("GLC", "SUV", 2025, "White"),
+            ("A-Class", "HATCHBACK", 2023, "White"),
         ]),
         "Audi": ("Performance and contemporary design", [
             ("A4", "SEDAN", 2024, "Gray"),
             ("Q5", "SUV", 2025, "Blue"),
+            ("A6", "SEDAN", 2024, "Black"),
         ]),
         "Kia": ("Modern, value-focused vehicles", [
             ("Sportage", "SUV", 2024, "Red"),
