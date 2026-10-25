@@ -3,57 +3,56 @@ $ cd server && python manage.py runserver 0.0.0.0:8000 --noreload
 Performing system checks...
 
 System check identified no issues (0 silenced).
-October 25, 2026 - 05:38:09
+October 25, 2026 - 05:42:06
 Django version 5.2.18, using settings 'djangoproj.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 
 WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
 For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
-[25/Oct/2026 05:38:10] "GET /djangoapp/health HTTP/1.1" 200 16
-[25/Oct/2026 05:38:10] "GET /djangoapp/health HTTP/1.1" 200 16
-[25/Oct/2026 05:38:10] "GET /djangoapp/get_cars HTTP/1.1" 200 1023
-[25/Oct/2026 05:38:11] "POST /djangoapp/login HTTP/1.1" 200 56
-[25/Oct/2026 05:38:11] "POST /djangoapp/logout HTTP/1.1" 200 40
-[25/Oct/2026 05:38:14] "GET / HTTP/1.1" 200 602
-[25/Oct/2026 05:38:14] "GET /static/js/main.6f16d39f.js HTTP/1.1" 200 177584
-[25/Oct/2026 05:38:14] "GET /static/css/main.387877b6.css HTTP/1.1" 200 4753
-[25/Oct/2026 05:38:14] "GET /djangoapp/get_dealers HTTP/1.1" 200 12400
+[25/Oct/2026 05:42:07] "GET /djangoapp/health HTTP/1.1" 200 16
+[25/Oct/2026 05:42:07] "GET /djangoapp/health HTTP/1.1" 200 16
+[25/Oct/2026 05:42:07] "GET /djangoapp/get_cars HTTP/1.1" 200 1023
+[25/Oct/2026 05:42:08] "POST /djangoapp/login HTTP/1.1" 200 56
+[25/Oct/2026 05:42:08] "POST /djangoapp/logout HTTP/1.1" 200 40
+[25/Oct/2026 05:42:23] "GET / HTTP/1.1" 200 602
+[25/Oct/2026 05:42:23] "GET /static/js/main.6f16d39f.js HTTP/1.1" 200 177584
+[25/Oct/2026 05:42:23] "GET /static/css/main.387877b6.css HTTP/1.1" 200 4753
+[25/Oct/2026 05:42:23] "GET /djangoapp/get_dealers HTTP/1.1" 200 12400
 Not Found: /favicon.ico
-[25/Oct/2026 05:38:14] "GET /favicon.ico HTTP/1.1" 404 3928
-[25/Oct/2026 05:38:15] "GET /login HTTP/1.1" 301 0
-[25/Oct/2026 05:38:15] "GET /login/ HTTP/1.1" 200 602
-[25/Oct/2026 05:38:16] "POST /djangoapp/login HTTP/1.1" 200 56
-[25/Oct/2026 05:38:16] "GET / HTTP/1.1" 200 602
-[25/Oct/2026 05:38:16] "GET /djangoapp/get_dealers HTTP/1.1" 200 12400
-[25/Oct/2026 05:38:16] "GET /djangoapp/get_dealers HTTP/1.1" 200 12400
-[25/Oct/2026 05:38:17] "GET /djangoapp/get_dealers/Kansas HTTP/1.1" 200 269
-[25/Oct/2026 05:38:19] "GET /dealer/2 HTTP/1.1" 301 0
-[25/Oct/2026 05:38:19] "GET /dealer/2/ HTTP/1.1" 200 602
-[25/Oct/2026 05:38:19] "GET /djangoapp/dealer/2 HTTP/1.1" 200 274
-[25/Oct/2026 05:38:19] "GET /djangoapp/reviews/dealer/2 HTTP/1.1" 200 573
-[25/Oct/2026 05:38:20] "GET /postreview/2 HTTP/1.1" 301 0
-[25/Oct/2026 05:38:20] "GET /postreview/2/ HTTP/1.1" 200 602
-[25/Oct/2026 05:38:20] "GET /static/css/main.387877b6.css HTTP/1.1" 304 0
-[25/Oct/2026 05:38:20] "GET /static/js/main.6f16d39f.js HTTP/1.1" 304 0
-[25/Oct/2026 05:38:22] "POST /djangoapp/add_review HTTP/1.1" 201 299
-[25/Oct/2026 05:38:22] "GET /djangoapp/dealer/2 HTTP/1.1" 200 274
-[25/Oct/2026 05:38:22] "GET /djangoapp/reviews/dealer/2 HTTP/1.1" 200 870
-[25/Oct/2026 05:38:23] "GET /admin/ HTTP/1.1" 302 0
-[25/Oct/2026 05:38:23] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3695
-[25/Oct/2026 05:38:23] "GET /static/admin/css/base.css HTTP/1.1" 200 22120
-[25/Oct/2026 05:38:23] "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
-[25/Oct/2026 05:38:23] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
-[25/Oct/2026 05:38:23] "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
-[25/Oct/2026 05:38:23] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
-[25/Oct/2026 05:38:23] "GET /static/admin/css/login.css HTTP/1.1" 200 951
-[25/Oct/2026 05:38:23] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
-[25/Oct/2026 05:38:24] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
-[25/Oct/2026 05:38:24] "GET /admin/ HTTP/1.1" 200 7808
-[25/Oct/2026 05:38:24] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
-[25/Oct/2026 05:38:24] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
-[25/Oct/2026 05:38:24] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
-[25/Oct/2026 05:38:25] "POST /admin/logout/ HTTP/1.1" 200 3568
+[25/Oct/2026 05:42:23] "GET /favicon.ico HTTP/1.1" 404 3928
+[25/Oct/2026 05:42:25] "GET /login HTTP/1.1" 301 0
+[25/Oct/2026 05:42:25] "GET /login/ HTTP/1.1" 200 602
+[25/Oct/2026 05:42:25] "POST /djangoapp/login HTTP/1.1" 200 56
+[25/Oct/2026 05:42:25] "GET / HTTP/1.1" 200 602
+[25/Oct/2026 05:42:25] "GET /djangoapp/get_dealers HTTP/1.1" 200 12400
+[25/Oct/2026 05:42:27] "GET /djangoapp/get_dealers/Kansas HTTP/1.1" 200 269
+[25/Oct/2026 05:42:28] "GET /dealer/2 HTTP/1.1" 301 0
+[25/Oct/2026 05:42:28] "GET /dealer/2/ HTTP/1.1" 200 602
+[25/Oct/2026 05:42:28] "GET /djangoapp/dealer/2 HTTP/1.1" 200 274
+[25/Oct/2026 05:42:28] "GET /djangoapp/reviews/dealer/2 HTTP/1.1" 200 573
+[25/Oct/2026 05:42:30] "GET /postreview/2 HTTP/1.1" 301 0
+[25/Oct/2026 05:42:30] "GET /postreview/2/ HTTP/1.1" 200 602
+[25/Oct/2026 05:42:30] "GET /static/js/main.6f16d39f.js HTTP/1.1" 304 0
+[25/Oct/2026 05:42:30] "GET /static/css/main.387877b6.css HTTP/1.1" 304 0
+[25/Oct/2026 05:42:31] "POST /djangoapp/add_review HTTP/1.1" 201 299
+[25/Oct/2026 05:42:31] "GET /djangoapp/dealer/2 HTTP/1.1" 200 274
+[25/Oct/2026 05:42:31] "GET /djangoapp/reviews/dealer/2 HTTP/1.1" 200 870
+[25/Oct/2026 05:42:33] "GET /admin/ HTTP/1.1" 302 0
+[25/Oct/2026 05:42:33] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3695
+[25/Oct/2026 05:42:33] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[25/Oct/2026 05:42:33] "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[25/Oct/2026 05:42:33] "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[25/Oct/2026 05:42:33] "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[25/Oct/2026 05:42:33] "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[25/Oct/2026 05:42:33] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[25/Oct/2026 05:42:33] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[25/Oct/2026 05:42:33] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[25/Oct/2026 05:42:33] "GET /admin/ HTTP/1.1" 200 7808
+[25/Oct/2026 05:42:33] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[25/Oct/2026 05:42:33] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[25/Oct/2026 05:42:33] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[25/Oct/2026 05:42:35] "POST /admin/logout/ HTTP/1.1" 200 3568
 
 $ curl -fsS http://127.0.0.1:8000/djangoapp/health
 {"status": "ok"}
