@@ -2,7 +2,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
 
 [
     {
-        "_id": "6adda1ec31a781e89b222150",
+        "_id": "6adda329001ed583df83dc52",
         "id": 1,
         "city": "El Paso",
         "state": "Texas",
@@ -15,7 +15,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Holdlamis Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222151",
+        "_id": "6adda329001ed583df83dc53",
         "id": 2,
         "city": "Minneapolis",
         "state": "Minnesota",
@@ -28,7 +28,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Temp Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222152",
+        "_id": "6adda329001ed583df83dc54",
         "id": 3,
         "city": "Birmingham",
         "state": "Alabama",
@@ -41,7 +41,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Sub-Ex Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222153",
+        "_id": "6adda329001ed583df83dc55",
         "id": 4,
         "city": "Dallas",
         "state": "Texas",
@@ -54,7 +54,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Solarbreeze Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222154",
+        "_id": "6adda329001ed583df83dc56",
         "id": 5,
         "city": "Baltimore",
         "state": "Maryland",
@@ -67,7 +67,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Regrant Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222155",
+        "_id": "6adda329001ed583df83dc57",
         "id": 6,
         "city": "Wilkes Barre",
         "state": "Pennsylvania",
@@ -80,7 +80,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Stronghold Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222156",
+        "_id": "6adda329001ed583df83dc58",
         "id": 7,
         "city": "Pueblo",
         "state": "Colorado",
@@ -93,7 +93,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Job Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222157",
+        "_id": "6adda329001ed583df83dc59",
         "id": 8,
         "city": "Topeka",
         "state": "Kansas",
@@ -106,7 +106,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Bytecard Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222158",
+        "_id": "6adda329001ed583df83dc5a",
         "id": 9,
         "city": "Dallas",
         "state": "Texas",
@@ -119,7 +119,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Job Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222159",
+        "_id": "6adda329001ed583df83dc5b",
         "id": 10,
         "city": "Washington",
         "state": "District of Columbia",
@@ -132,7 +132,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Alphazap Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22215a",
+        "_id": "6adda329001ed583df83dc5c",
         "id": 11,
         "city": "Carol Stream",
         "state": "Illinois",
@@ -145,7 +145,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Rank Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22215b",
+        "_id": "6adda329001ed583df83dc5d",
         "id": 12,
         "city": "Silver Spring",
         "state": "Maryland",
@@ -158,7 +158,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Tin Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22215c",
+        "_id": "6adda329001ed583df83dc5e",
         "id": 13,
         "city": "Baltimore",
         "state": "Maryland",
@@ -171,7 +171,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Y-Solowarm Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22215d",
+        "_id": "6adda329001ed583df83dc5f",
         "id": 14,
         "city": "San Francisco",
         "state": "California",
@@ -184,7 +184,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "It Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22215e",
+        "_id": "6adda329001ed583df83dc60",
         "id": 15,
         "city": "San Antonio",
         "state": "Texas",
@@ -197,7 +197,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Tempsoft Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22215f",
+        "_id": "6adda329001ed583df83dc61",
         "id": 16,
         "city": "El Paso",
         "state": "Texas",
@@ -210,7 +210,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Treeflex Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222160",
+        "_id": "6adda329001ed583df83dc62",
         "id": 17,
         "city": "San Jose",
         "state": "California",
@@ -223,7 +223,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Home Ing Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222161",
+        "_id": "6adda329001ed583df83dc63",
         "id": 18,
         "city": "Whittier",
         "state": "California",
@@ -236,7 +236,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Bitchip Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222162",
+        "_id": "6adda329001ed583df83dc64",
         "id": 19,
         "city": "Hialeah",
         "state": "Florida",
@@ -249,7 +249,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Otcom Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222163",
+        "_id": "6adda329001ed583df83dc65",
         "id": 20,
         "city": "Detroit",
         "state": "Michigan",
@@ -262,7 +262,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Subin Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222164",
+        "_id": "6adda329001ed583df83dc66",
         "id": 21,
         "city": "San Francisco",
         "state": "California",
@@ -275,7 +275,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Andalax Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222165",
+        "_id": "6adda329001ed583df83dc67",
         "id": 22,
         "city": "Fort Lauderdale",
         "state": "Florida",
@@ -288,7 +288,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Y-Solowarm Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222166",
+        "_id": "6adda329001ed583df83dc68",
         "id": 23,
         "city": "Des Moines",
         "state": "Iowa",
@@ -301,7 +301,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Bitchip Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222167",
+        "_id": "6adda329001ed583df83dc69",
         "id": 24,
         "city": "Utica",
         "state": "New York",
@@ -314,7 +314,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Aerified Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222168",
+        "_id": "6adda329001ed583df83dc6a",
         "id": 25,
         "city": "Washington",
         "state": "District of Columbia",
@@ -327,7 +327,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Opela Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222169",
+        "_id": "6adda329001ed583df83dc6b",
         "id": 26,
         "city": "Pittsburgh",
         "state": "Pennsylvania",
@@ -340,7 +340,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Flowdesk Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22216a",
+        "_id": "6adda329001ed583df83dc6c",
         "id": 27,
         "city": "San Antonio",
         "state": "Texas",
@@ -353,7 +353,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Namfix Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22216b",
+        "_id": "6adda329001ed583df83dc6d",
         "id": 28,
         "city": "Hialeah",
         "state": "Florida",
@@ -366,7 +366,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Fixflex Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22216c",
+        "_id": "6adda329001ed583df83dc6e",
         "id": 29,
         "city": "San Francisco",
         "state": "California",
@@ -379,7 +379,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Fix San Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22216d",
+        "_id": "6adda329001ed583df83dc6f",
         "id": 30,
         "city": "Houston",
         "state": "Texas",
@@ -392,7 +392,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Opela Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22216e",
+        "_id": "6adda329001ed583df83dc70",
         "id": 31,
         "city": "New York City",
         "state": "New York",
@@ -405,7 +405,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Fintone Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22216f",
+        "_id": "6adda329001ed583df83dc71",
         "id": 32,
         "city": "Wilkes Barre",
         "state": "Pennsylvania",
@@ -418,7 +418,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Subin Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222170",
+        "_id": "6adda329001ed583df83dc72",
         "id": 33,
         "city": "Des Moines",
         "state": "Iowa",
@@ -431,7 +431,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Tres-Zap Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222171",
+        "_id": "6adda329001ed583df83dc73",
         "id": 34,
         "city": "Silver Spring",
         "state": "Maryland",
@@ -444,7 +444,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Gembucket Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222172",
+        "_id": "6adda329001ed583df83dc74",
         "id": 35,
         "city": "Seattle",
         "state": "Washington",
@@ -457,7 +457,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Treeflex Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222173",
+        "_id": "6adda329001ed583df83dc75",
         "id": 36,
         "city": "Vienna",
         "state": "Virginia",
@@ -470,7 +470,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Latlux Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222174",
+        "_id": "6adda329001ed583df83dc76",
         "id": 37,
         "city": "Detroit",
         "state": "Michigan",
@@ -483,7 +483,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Ventosanzap Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222175",
+        "_id": "6adda329001ed583df83dc77",
         "id": 38,
         "city": "Dallas",
         "state": "Texas",
@@ -496,7 +496,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Zamit Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222176",
+        "_id": "6adda329001ed583df83dc78",
         "id": 39,
         "city": "Fresno",
         "state": "California",
@@ -509,7 +509,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Stronghold Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222177",
+        "_id": "6adda329001ed583df83dc79",
         "id": 40,
         "city": "Merrifield",
         "state": "Virginia",
@@ -522,7 +522,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Greenlam Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222178",
+        "_id": "6adda329001ed583df83dc7a",
         "id": 41,
         "city": "Baltimore",
         "state": "Maryland",
@@ -535,7 +535,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Tres-Zap Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222179",
+        "_id": "6adda329001ed583df83dc7b",
         "id": 42,
         "city": "Jersey City",
         "state": "New Jersey",
@@ -548,7 +548,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Konklab Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22217a",
+        "_id": "6adda329001ed583df83dc7c",
         "id": 43,
         "city": "Atlanta",
         "state": "Georgia",
@@ -561,7 +561,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Opela Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22217b",
+        "_id": "6adda329001ed583df83dc7d",
         "id": 44,
         "city": "Roanoke",
         "state": "Virginia",
@@ -574,7 +574,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Veribet Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22217c",
+        "_id": "6adda329001ed583df83dc7e",
         "id": 45,
         "city": "Norfolk",
         "state": "Virginia",
@@ -587,7 +587,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Konklux Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22217d",
+        "_id": "6adda329001ed583df83dc7f",
         "id": 46,
         "city": "New Orleans",
         "state": "Louisiana",
@@ -600,7 +600,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Regrant Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22217e",
+        "_id": "6adda329001ed583df83dc80",
         "id": 47,
         "city": "Stamford",
         "state": "Connecticut",
@@ -613,7 +613,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Prodder Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b22217f",
+        "_id": "6adda329001ed583df83dc81",
         "id": 48,
         "city": "Tucson",
         "state": "Arizona",
@@ -626,7 +626,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "It Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222180",
+        "_id": "6adda329001ed583df83dc82",
         "id": 49,
         "city": "Athens",
         "state": "Georgia",
@@ -639,7 +639,7 @@ $ curl -fsS 'http://127.0.0.1:3030/fetchDealers' | python -m json.tool
         "full_name": "Veribet Car Dealership"
     },
     {
-        "_id": "6adda1ec31a781e89b222181",
+        "_id": "6adda329001ed583df83dc83",
         "id": 50,
         "city": "Atlanta",
         "state": "Georgia",
