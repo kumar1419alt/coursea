@@ -1,4 +1,4 @@
-$ curl -X POST -c "/tmp/bestcars-evidence-cookies.txt" -H "Content-Type: application/json" --data-raw "$(printf '{"userName":"%s","password":"%s"}' "$DEMO_USERNAME" "$DEMO_PASSWORD")" "http://127.0.0.1:8000/djangoapp/login"
+$ curl -X POST -c "/tmp/bestcars-evidence-cookies.txt" -H "Content-Type: application/json" --data-raw '{"userName":"capstone-demo","password":"CiEvidencePass123!"}' "http://127.0.0.1:8000/djangoapp/login"
 
 {
     "userName": "capstone-demo",

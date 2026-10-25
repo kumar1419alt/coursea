@@ -10,6 +10,13 @@ $ curl -fsS 'http://127.0.0.1:8000/djangoapp/get_cars' | python -m json.tool
             "Color": "Gray"
         },
         {
+            "CarModel": "A6",
+            "CarMake": "Audi",
+            "Year": 2024,
+            "Type": "SEDAN",
+            "Color": "Black"
+        },
+        {
             "CarModel": "Q5",
             "CarMake": "Audi",
             "Year": 2025,
@@ -29,6 +36,13 @@ $ curl -fsS 'http://127.0.0.1:8000/djangoapp/get_cars' | python -m json.tool
             "Year": 2024,
             "Type": "SUV",
             "Color": "Red"
+        },
+        {
+            "CarModel": "A-Class",
+            "CarMake": "Mercedes-Benz",
+            "Year": 2023,
+            "Type": "HATCHBACK",
+            "Color": "White"
         },
         {
             "CarModel": "C-Class",
@@ -52,6 +66,13 @@ $ curl -fsS 'http://127.0.0.1:8000/djangoapp/get_cars' | python -m json.tool
             "Color": "Black"
         },
         {
+            "CarModel": "Pathfinder",
+            "CarMake": "Nissan",
+            "Year": 2024,
+            "Type": "SUV",
+            "Color": "Gray"
+        },
+        {
             "CarModel": "Rogue",
             "CarMake": "Nissan",
             "Year": 2025,
@@ -71,6 +92,13 @@ $ curl -fsS 'http://127.0.0.1:8000/djangoapp/get_cars' | python -m json.tool
             "Year": 2023,
             "Type": "SEDAN",
             "Color": "White"
+        },
+        {
+            "CarModel": "Prius",
+            "CarMake": "Toyota",
+            "Year": 2024,
+            "Type": "HATCHBACK",
+            "Color": "Silver"
         },
         {
             "CarModel": "RAV4",
